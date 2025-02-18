@@ -1,0 +1,21 @@
+# Ignore temporary files
+.DS_Store
+Thumbs.db
+/.cache
+var/
+log/
+logs/
+
+# Ignore dependencies
+node_modules
+
+# Ignore secrets
+.env
+.env.*
+/config.yaml
+
+# Ignore backup files
+backup/
+
+# Ignore IDE files
+.vscode/
