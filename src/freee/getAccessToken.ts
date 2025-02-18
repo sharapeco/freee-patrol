@@ -36,6 +36,7 @@ export async function getAccessToken(): Promise<string> {
 }
 
 function authorizeURL(): string {
-	const { FREEE_APP_ID, FREEE_COMPANY_ID } = process.env;
-	return `https://app.secure.freee.co.jp/developers/start_guides/applications/${FREEE_APP_ID}/authorize?company_id=${FREEE_COMPANY_ID}`;
+	const appId = process.env.FREEE_APP_ID as string;
+	const companyId = process.env.FREEE_AUTH_COMPANY_ID as string;
+	return `https://app.secure.freee.co.jp/developers/start_guides/applications/${appId}/authorize?company_id=${companyId}`;
 }
