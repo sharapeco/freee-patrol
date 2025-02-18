@@ -64,7 +64,7 @@ monthly:
     min_day: 4 # この日以降、データがない場合は入力プロンプトを表示
     account_item_id: 56789012 # 勘定科目ID（省略可）
     item_id: 198765432 # 品目ID（省略可）
-	partner_id: 3456789 # 取引先ID（省略可）
+    partner_id: 3456789 # 取引先ID（省略可）
   -
     name: 水道料金
     slug: 水道
@@ -76,7 +76,7 @@ monthly:
     slug: ネット
     color: lightBlue
     min_day: 24
-	day: 31 # 指定するとデフォルト値として入力される
+    day: 31 # 指定するとデフォルト値として入力される
     amount: 3113 # 指定するとデフォルト値として入力される
 yearly:
   -
