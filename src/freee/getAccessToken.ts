@@ -1,6 +1,7 @@
 import { createLocalStorage } from "localstorage-ponyfill";
 import { gray, red, bold, underline } from "kolorist";
 import { question } from "../cli/question.js";
+import { Client } from "./client/client.js";
 
 export async function getAccessToken(): Promise<string> {
 	const localStorage = createLocalStorage();
@@ -11,6 +12,11 @@ export async function getAccessToken(): Promise<string> {
 			if (token == null) {
 				throw new Error("invalid_access_token");
 			}
+
+			// APIを叩いてみて、トークンが有効か確認
+			const client = new Client(token);
+			await client.getCompanies();
+
 			return token;
 		} catch (e) {
 			if (
