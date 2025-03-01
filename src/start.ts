@@ -196,7 +196,6 @@ async function inputMonthly(
 			// 費用が発生するより前の日付の場合はスキップ
 			const minDate = new Date(year, month.month - 1, c.min_day);
 			if (now < minDate) continue;
-			console.log(year, month.month - 1, c.min_day, "// ", minDate, " // ", now);
 
 			let defaultDate = c.day;
 			if (defaultDate == null) {
