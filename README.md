@@ -2,6 +2,8 @@
 
 Freee会計で毎月・毎年の費用を確認・入力するためのコマンドラインツールです。
 
+![Screenshot](./screenshot.jpg)
+
 ## 機能
 
 - 毎月の経費を確認・入力
@@ -19,7 +21,15 @@ Freee会計で毎月・毎年の費用を確認・入力するためのコマン
 4. 経費の設定を `config.yaml` に記述
 5. `npm start`
 
-### `.env` の記述例
+### コマンドラインオプション
+
+`-year=2022` と指定することで、指定した年の経費を確認・入力できます。
+
+```bash
+npm start -year=2022
+```
+
+## `.env` の記述例
 
 アクセストークン取得ページの URL は `https://app.secure.freee.co.jp/developers/start_guides/applications/${appId}/authorize?company_id=${companyId}` のようになっており、ここから `appId` と `companyId` をコピーして記述します。
 
@@ -34,16 +44,9 @@ FREEE_COMPANY_ID=1234567
 FREEE_AUTH_COMPANY_ID=2345678
 ```
 
-### 設定ファイルに記述するIDを調べるためのスクリプト
+## 経費の設定
 
-- `npm run companies` …… 事業所一覧
-- `npm run partners` …… 取引先一覧
-- `npm run taxes` …… 税区分一覧
-- `npm run wallets` …… 口座一覧
-
-ほかに勘定科目IDと品目IDを調べる必要がありますが、まだ用意していません。
-
-### `config.yaml` の記述例
+`config.yaml` の記述例:
 
 ```yaml
 # 事業所ID
@@ -73,7 +76,7 @@ monthly:
     months: [1, 3, 5, 7, 9, 11] # 奇数月のみ
   -
     name: インターネット料金
-    slug: ネット
+    slug: inet
     color: lightBlue
     min_day: 24
     day: 31 # 指定するとデフォルト値として入力される
@@ -88,3 +91,13 @@ yearly:
 ```
 
 - `color` …… blue, cyan, gray, green, magenta, red, yellow, lightBlue, lightCyan, lightGray, lightGreen, lightMagenta, lightRed, lightYellow のいずれか
+
+### 設定ファイルに記述するIDを調べるためのスクリプト
+
+- `npm run companies` …… 事業所一覧
+- `npm run partners` …… 取引先一覧
+- `npm run taxes` …… 税区分一覧
+- `npm run wallets` …… 口座一覧
+
+ほかに勘定科目IDと品目IDを調べる必要がありますが、まだ用意していません。
+
