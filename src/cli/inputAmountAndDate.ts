@@ -1,5 +1,5 @@
 import { gray } from "kolorist";
-import { question } from "./question.js";
+import { question } from "./question.ts";
 
 type Param = {
 	month: number; // 何月分か表示する

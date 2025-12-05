@@ -1,8 +1,8 @@
 import "dotenv/config";
 import { gray, green, magenta, bold } from "kolorist";
-import { Client } from "./freee/client/client.js";
-import { getAccessToken } from "./freee/getAccessToken.js";
-import { compare } from "./lib/compare.js";
+import { Client } from "./freee/client/client.ts";
+import { getAccessToken } from "./freee/getAccessToken.ts";
+import { compare } from "./lib/compare.ts";
 
 const company_id = process.env.FREEE_COMPANY_ID as string;
 if (company_id == null) {

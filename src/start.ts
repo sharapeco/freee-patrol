@@ -1,10 +1,10 @@
 import "dotenv/config";
 import * as kolor from "kolorist";
-import { getAccessToken } from "./freee/getAccessToken.js";
-import { MyClient, type ExpenseInput } from "./freee/MyClient.js";
-import { readConfig, type Config } from "./config/readConfig.js";
-import { printTable } from "./lib/printTable.js";
-import { inputAmountAndDate } from "./cli/inputAmountAndDate.js";
+import { getAccessToken } from "./freee/getAccessToken.ts";
+import { MyClient, type ExpenseInput } from "./freee/MyClient.ts";
+import { readConfig, type Config } from "./config/readConfig.ts";
+import { printTable } from "./lib/printTable.ts";
+import { inputAmountAndDate } from "./cli/inputAmountAndDate.ts";
 
 /**
  *

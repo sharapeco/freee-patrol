@@ -1,6 +1,6 @@
 import { green, magenta, bold } from "kolorist";
-import { Client } from "./freee/client/client.js";
-import { getAccessToken } from "./freee/getAccessToken.js";
+import { Client } from "./freee/client/client.ts";
+import { getAccessToken } from "./freee/getAccessToken.ts";
 
 async function main(token: string): Promise<void> {
 	const client = new Client(token);

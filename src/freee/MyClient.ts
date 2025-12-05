@@ -1,5 +1,5 @@
-import { Client } from "./client/client.js";
-import type { Deal } from "./client/types/Deal.js";
+import { Client } from "./client/client.ts";
+import type { Deal } from "./client/types/Deal.ts";
 
 type MyClientConfig = {
 	company_id: number;

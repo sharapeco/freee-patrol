@@ -1,4 +1,4 @@
-import type { DateString, IdType, Price } from "./types";
+import type { DateString, IdType, Price } from "./types.ts";
 
 export type Deal = {
 	id: IdType;

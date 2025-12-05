@@ -1,7 +1,7 @@
 import { createLocalStorage } from "localstorage-ponyfill";
 import { gray, red, bold, underline } from "kolorist";
-import { question } from "../cli/question.js";
-import { Client } from "./client/client.js";
+import { question } from "../cli/question.ts";
+import { Client } from "./client/client.ts";
 
 export async function getAccessToken(): Promise<string> {
 	const localStorage = createLocalStorage();

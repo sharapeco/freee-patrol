@@ -1,9 +1,9 @@
-import type { Company } from "./types/Company.js";
-import type { Deal, DealCreateParam, DealsParam } from "./types/Deal.js";
-import type { Partner } from "./types/Partner.js";
-import type { Tax } from "./types/Tax.js";
-import type { Walletable } from "./types/Walletable.js";
-import type { Meta as ApiMeta } from "./types/types.js";
+import type { Company } from "./types/Company.ts";
+import type { Deal, DealCreateParam, DealsParam } from "./types/Deal.ts";
+import type { Partner } from "./types/Partner.ts";
+import type { Tax } from "./types/Tax.ts";
+import type { Walletable } from "./types/Walletable.ts";
+import type { Meta as ApiMeta } from "./types/types.ts";
 
 // biome-ignore lint/suspicious/noExplicitAny: 予期できないため
 type ParamValue = any;
