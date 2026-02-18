@@ -15,18 +15,18 @@ Freee会計で毎月・毎年の費用を確認・入力するためのコマン
 
 ## 使い方
 
-1. 最初の1回のみ `npm install` を実行
+1. 最初の1回のみ `pnpm install` を実行
 2. [Freee API スタートガイド](https://developer.freee.co.jp/startguide)に従い、アクセストークン取得ページまで辿り着く
 3. 必要な情報を `.env` に記述
 4. 経費の設定を `config.yaml` に記述
-5. `npm start`
+5. `pnpm start`
 
 ### コマンドラインオプション
 
-`-year=2022` と指定することで、指定した年の経費を確認・入力できます。
+`start` のあとに年を指定することで、指定した年の経費を確認・入力できます。
 
 ```bash
-npm start -year=2022
+pnpm start 2022
 ```
 
 ## `.env` の記述例
@@ -94,10 +94,10 @@ yearly:
 
 ### 設定ファイルに記述するIDを調べるためのスクリプト
 
-- `npm run companies` …… 事業所一覧
-- `npm run partners` …… 取引先一覧
-- `npm run taxes` …… 税区分一覧
-- `npm run wallets` …… 口座一覧
+- `pnpm companies` …… 事業所一覧
+- `pnpm partners` …… 取引先一覧
+- `pnpm taxes` …… 税区分一覧
+- `pnpm wallets` …… 口座一覧
 
 ほかに勘定科目IDと品目IDを調べる必要がありますが、まだ用意していません。
 
