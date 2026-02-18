@@ -12,6 +12,7 @@ node_modules
 # Ignore secrets
 .env
 .env.*
+!.env.example
 /config.yaml
 
 # Ignore backup files
