@@ -1,5 +1,7 @@
 import type { Company } from "./types/Company.ts";
 import type { Deal, DealCreateParam, DealsParam } from "./types/Deal.ts";
+import type { AccountItem } from "./types/AccountItem.ts";
+import type { Item } from "./types/Item.ts";
 import type { Partner } from "./types/Partner.ts";
 import type { Tax } from "./types/Tax.ts";
 import type { Walletable } from "./types/Walletable.ts";
@@ -141,5 +143,21 @@ export class Client {
 			company_id,
 		});
 		return items as Walletable[];
+	}
+
+	async getAccountItems(company_id: string | number): Promise<AccountItem[]> {
+		const [items, _] = await this.getAll(
+			"/api/1/account_items",
+			"account_items",
+			{ company_id },
+		);
+		return items as AccountItem[];
+	}
+
+	async getItems(company_id: string | number): Promise<Item[]> {
+		const [items, _] = await this.getAll("/api/1/items", "items", {
+			company_id,
+		});
+		return items as Item[];
 	}
 }

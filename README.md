@@ -98,6 +98,6 @@ yearly:
 - `pnpm partners` …… 取引先一覧
 - `pnpm taxes` …… 税区分一覧
 - `pnpm wallets` …… 口座一覧
-
-ほかに勘定科目IDと品目IDを調べる必要がありますが、まだ用意していません。
+- `pnpm account-items` …… 勘定科目一覧
+- `pnpm items` …… 品目一覧
 

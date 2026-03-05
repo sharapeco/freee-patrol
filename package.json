@@ -5,7 +5,9 @@
     "companies": "ts-node --esm src/companies.ts",
     "partners": "ts-node --esm src/partners.ts",
     "taxes": "ts-node --esm src/taxes.ts",
-    "wallets": "ts-node --esm src/wallets.ts"
+    "wallets": "ts-node --esm src/wallets.ts",
+    "account-items": "ts-node --esm src/accountItems.ts",
+    "items": "ts-node --esm src/items.ts"
   },
   "devDependencies": {
     "@types/node": "^18.14.2",
